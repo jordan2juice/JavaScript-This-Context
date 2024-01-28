@@ -65,15 +65,12 @@ const person = {
 
 let pBtn = document
   .getElementById("button-4")
-  .addEventListener(
-    "click",
-    messageHandler.displayMessage1.bind(messageHandler)
-  );
+  .addEventListener("click", person.displayMessage1.bind(person));
 // With this binding messageHandler this is attached to the messageHandler with message1 property values
 let pBtn2 = document
   .getElementById("button-5")
-  .addEventListener(
-    "click",
-    messageHandler.displayMessage2.bind(messageHandler)
-  );
+  .addEventListener("click", person.displayMessage2.bind(person));
 // This will create an error because there are no message3 property in messageHandler object, this will not work because
+let pBtn3 = document
+  .getElementById("button-6")
+  .addEventListener("click", person.displayMessage3.bind(person));
