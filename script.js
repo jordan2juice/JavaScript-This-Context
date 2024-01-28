@@ -46,14 +46,15 @@ const person = {
   message2: "I am 30 years old",
   message3: "I work as a developer",
 
+  // this is referring to the person object
   displayMessage1: function () {
-    this.displayMessage1(this.message1);
+    this.displayMessage(this.message1);
   },
   displayMessage2: () => {
-    this.displayMessage2(this.message2);
+    this.displayMessage(this.message2);
   },
   displayMessage3: function () {
-    this.displayMessage3(this.message3);
+    this.displayMessage(this.message3);
   },
   displayMessage: function (message) {
     // function implementation
@@ -62,6 +63,8 @@ const person = {
     document.body.appendChild(p);
   },
 };
+
+const displayMessage2 = person.displayMessage2.bind(person);
 
 let pBtn = document
   .getElementById("button-4")
